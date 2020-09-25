@@ -12,5 +12,6 @@ const convert = function(nums) {
 
     root.left = convert(nums.slice(0, mid));
     root.right = convert(nums.slice(mid + 1));
+    return root;
 }
 
