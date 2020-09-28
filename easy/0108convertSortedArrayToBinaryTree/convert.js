@@ -15,3 +15,6 @@ const convert = function(nums) {
     return root;
 }
 
+var root = [1, 2, 3, 4, 5, 6, 7];
+console.log(root);
+
