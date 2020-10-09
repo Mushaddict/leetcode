@@ -8,3 +8,41 @@ function isValid(c) {
     return isDigit || isChar;        
 }
 //继续
+const isPalidrome = function (s) {
+    s = s.toLowerCase();
+    let left = 0;
+    let right = s.length - 1;
+
+    while(left < right) {
+        if(!isValid(s[left])) {
+            left++;
+            continue;
+        }
+
+        if(!isValid(s[right])) {
+            right--;
+            continue;
+        }
+
+        if (s[left] === s[right]) {
+            left++;
+            right--;
+        } else {
+            break;
+        }
+    }
+
+    return left <= right;
+}
+
+var string = "abbccccbba";
+var string2 = "abbcccccbba";
+
+console.log(isPalidrome(string));
+console.log(isPalidrome(string2));
+
+var input1 = "A man, a plan, a canal: Panama";
+var input2 = "race a car";
+
+console.log(isPalidrome(input1));
+console.log(isPalidrome(string2));
