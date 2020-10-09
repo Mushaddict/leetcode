@@ -6,5 +6,6 @@ const singleNumber = nums => {
     }
     return ret;
 }
+//异或
 
 console.log(singleNumber([2, 2, 1]));
