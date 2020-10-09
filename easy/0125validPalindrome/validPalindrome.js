@@ -7,3 +7,4 @@ function isValid(c) {
         && charCode <= "z".charCodeAt(0);
     return isDigit || isChar;        
 }
+//继续
