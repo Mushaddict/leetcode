@@ -18,7 +18,7 @@ public class minStack{
     public void push(int x) {
         // 辅助栈在必要的时候才增加
         data.add(x);
-        if(helper.isEmpty() || x <=helper.peek()) {
+        if(helper.isEmpty() || x <= helper.peek()) {
             helper.add(x);
         }
     }
@@ -45,6 +45,18 @@ public class minStack{
             throw new NoSuchElementException("can't find existing element");
         }
         return helper.peek();
+    }
+
+    public void print() {
+        System.out.println("element in data: ");
+        for (int element : data) {
+            System.out.println(element);
+        }
+        System.out.println("");
+        System.out.println("element in helper: ");
+        for (int element : helper) {
+            System.out.println(element);
+        }
     }
 
 }
